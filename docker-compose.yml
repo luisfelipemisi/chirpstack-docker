@@ -10,7 +10,9 @@ services:
       - mosquitto
 
   chirpstack-application-server:
-    image: chirpstack/chirpstack-application-server:3
+    build: /home/luisfelipemiranda/chirpstack-application-server
+    image: chirpstack/knot-chirpstack-app:latest
+    container_name: knot-chirpstack-app
     ports:
       - 8080:8080
     volumes:
