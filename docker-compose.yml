@@ -8,10 +8,11 @@ services:
     depends_on:
       - postgresql
       - mosquitto
+    networks:
+      - lora
 
   chirpstack-application-server:
-    build: /home/luisfelipemiranda/chirpstack-application-server
-    image: chirpstack/knot-chirpstack-app:latest
+    image: knot-chirpstack-app:latest
     container_name: knot-chirpstack-app
     ports:
       - 8080:8080
@@ -19,6 +20,8 @@ services:
       - ./configuration/chirpstack-application-server:/etc/chirpstack-application-server
     depends_on:
       - chirpstack-network-server
+    networks:
+      - lora
 
   chirpstack-gateway-bridge:
     image: chirpstack/chirpstack-gateway-bridge:3
@@ -28,6 +31,8 @@ services:
       - ./configuration/chirpstack-gateway-bridge:/etc/chirpstack-gateway-bridge
     depends_on: 
       - mosquitto
+    networks:
+      - lora
 
   postgresql:
     image: postgres:9.6-alpine
@@ -36,11 +41,15 @@ services:
     volumes:
       - ./configuration/postgresql/initdb:/docker-entrypoint-initdb.d
       - postgresqldata:/var/lib/postgresql/data
+    networks:
+      - lora
 
   redis:
     image: redis:5-alpine
     volumes:
       - redisdata:/data
+    networks:
+      - lora
 
   mosquitto:
     image: eclipse-mosquitto:2
@@ -48,7 +57,17 @@ services:
       - 1883:1883
     volumes: 
       - ./configuration/eclipse-mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    networks:
+      - lora
 
 volumes:
   postgresqldata:
   redisdata:
+
+networks:
+  lora:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.52.0.0/16

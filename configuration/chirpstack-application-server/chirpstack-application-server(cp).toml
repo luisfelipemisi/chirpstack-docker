@@ -17,7 +17,7 @@ user_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODQ1OTE1MzMsImp0a
 
 
 [[application_server.integration.knot.devices]]
-id      = "cddbe3f250dd2678"
+id      = "c3dbe3f250dd2678"
 token   = ""
 name    = "lora"
 
@@ -46,6 +46,7 @@ name      = "sensor_umidade"
 [application_server.integration.knot.devices.config.event]
 change = true
 timeSec = 12
+
 
 [application_server.api]
 public_host="chirpstack-application-server:8001"
