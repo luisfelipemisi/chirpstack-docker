@@ -11,10 +11,9 @@ url="redis://redis:6379"
 enabled = ["knot"]
 
 [application_server.integration.knot]
-url = "amqp://knot:knot@172.25.4.125:5672"
+url = "amqp://knot:knot@10.0.0.188:5672"
 name = "knot lora"
-user_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODQ1OTE1MzMsImp0aSI6IjYxNWY5OWFkLThhOTktNGFhYy05YmIxLTMzY2NhYzc0YWVjNCIsImlhdCI6MTY1MzA1NTUzMywiaXNzIjoiY2VzYXJhaGZvZ0Brbm90Lm9yZy5iciIsInR5cGUiOjJ9.nzQsCU09iW8W6XS29SS5UVDzwZQkb9qfSsyRFEh0-Rg"
-
+user_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODE5Mjk3NzAsImp0aSI6IjM2MmI0ODRhLWY3NjYtNGVmNy1hMzk5LWZkOGIyZWUyZDc4ZCIsImlhdCI6MTY1MDM5Mzc3MCwiaXNzIjoibHVpc2ZlbGlwODBAZ21haWwuY29tIiwidHlwZSI6Mn0.AbzL31JdXgl8RX8eqWrnnmZK7eNYhlMWvbDAQmDAgnU"
 
 [[application_server.integration.knot.devices]]
 id      = "cddbe3f250dd2678"
@@ -22,11 +21,11 @@ token   = ""
 name    = "lora"
 
 [[application_server.integration.knot.devices.config]]
-sensorId = 33605
+sensorId = 1
 
 [application_server.integration.knot.devices.config.schema]
 valueType = 2
-unit      = 1
+unit      = 0
 typeId    = 65296
 name      = "Hora_da_Temperatura_Máx"
 
@@ -35,11 +34,11 @@ change = true
 timeSec = 12
 
 [[application_server.integration.knot.devices.config]]
-sensorId = 34563
+sensorId = 2
 
 [application_server.integration.knot.devices.config.schema]
 valueType = 2
-unit      = 1
+unit      = 0
 typeId    = 65296
 name      = "sensor_umidade"
 

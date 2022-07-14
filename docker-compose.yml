@@ -17,6 +17,7 @@ services:
     ports:
       - 8080:8080
     volumes:
+      - ./configuration/knot:/etc/knot
       - ./configuration/chirpstack-application-server:/etc/chirpstack-application-server
     depends_on:
       - chirpstack-network-server
