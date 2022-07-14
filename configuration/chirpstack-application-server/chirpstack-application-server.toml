@@ -16,7 +16,7 @@ name = "knot lora"
 user_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODE5Mjk3NzAsImp0aSI6IjM2MmI0ODRhLWY3NjYtNGVmNy1hMzk5LWZkOGIyZWUyZDc4ZCIsImlhdCI6MTY1MDM5Mzc3MCwiaXNzIjoibHVpc2ZlbGlwODBAZ21haWwuY29tIiwidHlwZSI6Mn0.AbzL31JdXgl8RX8eqWrnnmZK7eNYhlMWvbDAQmDAgnU"
 
 [[application_server.integration.knot.devices]]
-id      = "cddbe3f250dd2678"
+deveui  = "cddbe3f250dd2678"
 token   = ""
 name    = "lora"
 

@@ -1,6 +1,7 @@
 cddbe3f250dd2678:
-  id: cddbe3f250dd2678
-  token: a3b0638e-451a-46e4-aeb6-2b0f7b3522fc
+  id: ""
+  token: ""
+  deveui: cddbe3f250dd2678
   name: lora
   config:
   - sensorid: 1
@@ -25,6 +26,6 @@ cddbe3f250dd2678:
       timesec: 12
       lowerthreshold: null
       upperthreshold: null
-  state: readToSendData
+  state: waitRegisterResponse
   data: []
   error: ""
