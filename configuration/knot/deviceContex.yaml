@@ -1,31 +1,20 @@
-cddbe3f250dd2678:
-  id: ""
-  token: ""
-  deveui: cddbe3f250dd2678
-  name: lora
+f803320600027594:
+  id: e5d4edc0f04d6a58
+  token: e3b749a4-3b4e-4bd7-b20f-b9cbd01e1b1b
+  deveui: f803320600027594
+  name: Vent_Gastec
   config:
   - sensorid: 1
     schema:
       valuetype: 2
       unit: 0
       typeid: 65296
-      name: Hora_da_Temperatura_Máx
+      name: sensor_teste
     event:
       change: true
       timesec: 12
       lowerthreshold: null
       upperthreshold: null
-  - sensorid: 2
-    schema:
-      valuetype: 2
-      unit: 0
-      typeid: 65296
-      name: sensor_umidade
-    event:
-      change: true
-      timesec: 12
-      lowerthreshold: null
-      upperthreshold: null
-  state: waitRegisterResponse
+  state: readToSendData
   data: []
   error: ""
